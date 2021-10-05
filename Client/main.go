@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	"github.com/Akongstad/gRPC-time/Time"
 	"google.golang.org/grpc"
 	"log"
-	"mod/Time"
 	"time"
 )
 

@@ -1,4 +1,4 @@
-module mod
+module github.com/Akongstad/gRPC-time
 
 go 1.17
 

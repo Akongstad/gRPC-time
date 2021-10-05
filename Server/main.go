@@ -2,9 +2,9 @@ package main
 
 import (
 	"context"
+	"github.com/Akongstad/gRPC-time/Time"
 	"google.golang.org/grpc"
 	"log"
-	"mod/Time"
 	"net"
 	"time"
 )
@@ -17,7 +17,7 @@ type server struct {
 	Time.UnimplementedTimeServiceServer
 }
 
-func (s *server) GetMessage(ctx context.Context, r *Time.Message) (*Time.Message, error) {
+func (s *server) GetTime(ctx context.Context, r *Time.Message) (*Time.Message, error) {
 	log.Printf("Received msg %r", r.GetBody())
 	return &Time.Message{Body: time.Now().String()}, nil
 }
