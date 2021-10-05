@@ -1,0 +1,11 @@
+syntax = "proto3";
+option go_package = "/Users/andreaskongstad/Documents/goLang/gRPC-time/time";
+package Time;
+
+message Message{
+  string Body = 1;
+}
+
+service TimeService{
+  rpc GetTime(Message) returns (Message){}
+}
